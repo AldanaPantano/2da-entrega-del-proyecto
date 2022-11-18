@@ -1,0 +1,169 @@
+/* reset */
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+/* estilos del menu */
+
+header nav ul {
+    background-color: whitesmoke;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    list-style-type: none;   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+}
+
+
+/* estilos del banner */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner {
+    background-color: rgb(185, 241, 178);
+    background-image: url(../img/solen-feyissa-lDy7jcXiUnQ-unsplash.jpg);
+    background-repeat: no repeat;
+    height: 400px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+header section div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.boton {
+    background-color: #51B0DF;
+    color: whitesmoke;
+    padding: 0.7rem;
+    width: 5rem;
+    box-shadow: 2px 2px 5px black;
+    text-shadow: 1px 1px 5px black;
+}
+
+.banner div button:hover {
+    font-weight: bold;
+    box-shadow: 2px 2px 2px rgb(112, 106, 106);
+    transform: scale(0.9);
+}
+
+
+/* cajas con contenido */
+
+.container{
+    height: 400 px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.caja{
+    background-color: rgb(163, 250, 151);
+    height: 200px;
+    width: 200px;
+    top: 20px;
+    left: 20px;
+
+    
+
+    /* propiedad del margin */
+    border: 2px solid rgb(145, 231, 96);
+    margin: 30px 50px 30px 50px;
+    padding: 30px;
+}
+
+
+.caja div p {
+
+    color: grey;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+section h3{ 
+    text-align: center;
+    color: rgb(153, 153, 70);
+    margin: 5%;
+    font-size:xx-large;
+    text-shadow: 2px 2px 2px rgb(179, 209, 172);
+    
+}
+
+
+
+/* ESTILOS DEL FOOTER */
+
+footer {
+    background-image: linear-gradient(to top, rgba(59, 211, 59, 0.801), rgb(152, 209, 87));
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30%;
+}
+
+footer div iframe {
+    height: 250px;
+    width: 250px; 
+    margin: 10px;
+
+}
+
+footer div img {
+    height: 50px;
+    width: 50px;
+}
+footer div img:hover{ 
+    filter: drop-shadow(5px 5px 3px);
+}
+
+
+
+
+/*........... MQ............... */
+
+@media screen and (min-width: 800px){
+    .caja {
+        background-color: azure;
+       
+    }
+};
+    
+
+
+
+
+
+
+
+
+
+
+
+/* estilos page "Acerca de mi" */
+
+.fotoPsico {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
