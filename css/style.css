@@ -1,9 +1,9 @@
 /* reset */
 
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -15,13 +15,13 @@ header nav ul {
     padding: 10px 10px 10px 10px;
     display: flex;
     flex-direction: row-reverse;
-    list-style-type: none;   
+    list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-nav ul li a{
+nav ul li a {
     color: black;
     text-decoration: none;
 }
@@ -30,28 +30,42 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-
-/* estilos del banner */
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Propiedades del banner */
+
 .banner {
     background-color: rgb(185, 241, 178);
     background-image: url(../img/solen-feyissa-lDy7jcXiUnQ-unsplash.jpg);
     background-repeat: no repeat;
-    height: 400px;
     text-align: center;
     color: whitesmoke;
+    height: 300px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    row-gap: 50px;
 }
 
-header section div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.hijo-banner-1 {
+    margin: 25px;
+    font-size: 50px;
 }
+
+.hijo-banner-2 {
+    margin: 10px;
+    font-size: 30px;
+}
+
+.hijo-banner-3 {
+    font-size: 20px;
+}
+
 
 .boton {
     background-color: #51B0DF;
@@ -60,9 +74,13 @@ header section div{
     width: 5rem;
     box-shadow: 2px 2px 5px black;
     text-shadow: 1px 1px 5px black;
+
+    margin: 45px;
+    ;
 }
 
-.banner div button:hover {
+/* animacion del boton */
+.boton:hover {
     font-weight: bold;
     box-shadow: 2px 2px 2px rgb(112, 106, 106);
     transform: scale(0.9);
@@ -71,43 +89,56 @@ header section div{
 
 /* cajas con contenido */
 
-.container{
-    height: 400 px;
+.container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 100px 100px 200px;
+    gap: 30px;
+}
+
+
+.caja {
+    /* no toma el color de fondo en cada caja */
+    background-color: rgb(167, 240, 125);
+    height: 220px;
+    width: 220px;
+
+    /* propiedad del margin */
+    border: 2px solid rgb(145, 231, 96);
+    margin: 100px 30px 50px 30px;
+    padding: 5px;
+}
+
+.img-caja {
+    /* el color de fondo no va, pero no me toma el BG de la caja y no se distingue la imagen */
+    background-color: grey;
     display: flex;
-    flex-direction: row;
     justify-content: center;
 
 }
 
-.caja{
-    background-color: rgb(163, 250, 151);
-    height: 200px;
-    width: 200px;
-    top: 20px;
-    left: 20px;
-
-    
-
-    /* propiedad del margin */
-    border: 2px solid rgb(145, 231, 96);
-    margin: 30px 50px 30px 50px;
-    padding: 30px;
-}
-
-
-.caja div p {
-
-    color: grey;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
-}
-
-section h3{ 
+.titulo-caja {
+    font-size: 1.5rem;
     text-align: center;
-    color: rgb(153, 153, 70);
+    padding-bottom: 8%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+
+.parrafo-caja {
+    color: grey;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+section h3 {
+    text-align: center;
+    color: rgb(103, 153, 70);
     margin: 5%;
-    font-size:xx-large;
+    font-size: 2rem;
     text-shadow: 2px 2px 2px rgb(179, 209, 172);
-    
+
 }
 
 
@@ -115,7 +146,7 @@ section h3{
 /* ESTILOS DEL FOOTER */
 
 footer {
-    background-image: linear-gradient(to top, rgba(59, 211, 59, 0.801), rgb(152, 209, 87));
+    background-image: linear-gradient(to top, rgba(204, 236, 204, 0.801), rgb(204, 238, 165));
     height: 300px;
     display: flex;
     justify-content: center;
@@ -124,17 +155,19 @@ footer {
 
 footer div iframe {
     height: 250px;
-    width: 250px; 
+    width: 250px;
     margin: 10px;
-
 }
 
-footer div img {
-    height: 50px;
-    width: 50px;
-}
-footer div img:hover{ 
+
+
+footer div img:hover {
     filter: drop-shadow(5px 5px 3px);
+}
+
+footer h3 {
+    display: flex;
+    justify-content: center ;
 }
 
 
@@ -142,16 +175,26 @@ footer div img:hover{
 
 /*........... MQ............... */
 
-@media screen and (min-width: 800px){
-    .caja {
-        background-color: azure;
-       
+@media screen and (max-width: 800px) {
+    header nav ul {
+        display: grid;
+        justify-content: start;
     }
-};
-    
 
+    .banner {
+        width: 50rem;
+        height: 25rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr 1fr;
+    }
 
-
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 3fr 3fr 3fr;
+    }
+}
 
 
 
@@ -162,8 +205,6 @@ footer div img:hover{
 
 /* estilos page "Acerca de mi" */
 
-.fotoPsico {
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
+.figure{
+    width: 5%;
 }
